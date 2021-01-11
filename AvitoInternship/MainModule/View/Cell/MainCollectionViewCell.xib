@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCollectionViewCell" id="gTV-IL-0wX" customClass="MainCollectionViewCell" customModule="AvitoInternship" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="176"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="361" height="176"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jqz-zs-x8r">
+                        <rect key="frame" x="20" y="64" width="52" height="52"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="52" id="LBU-S2-c9F"/>
+                            <constraint firstAttribute="width" secondItem="Jqz-zs-x8r" secondAttribute="height" multiplier="1:1" id="Mda-eF-4YQ"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="jn2-ts-Wk8">
+                        <rect key="frame" x="96" y="61" width="197" height="84.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pk7-9S-HMb">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="24.5"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3j-1f-L9E">
+                                <rect key="frame" x="0.0" y="33.5" width="96" height="21"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jcK-44-OkF">
+                                <rect key="frame" x="0.0" y="63.5" width="48.5" height="21"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="IiZ-CB-3QE">
+                        <rect key="frame" x="325" y="78" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="IiZ-CB-3QE" secondAttribute="height" multiplier="1:1" id="Xgc-qi-uhZ"/>
+                            <constraint firstAttribute="width" constant="20" id="jzI-r9-N4A"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="IiZ-CB-3QE" firstAttribute="leading" secondItem="jn2-ts-Wk8" secondAttribute="trailing" constant="32" id="2YT-rT-kmB"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="jn2-ts-Wk8" secondAttribute="bottom" constant="30.5" id="FtJ-D8-iPq"/>
+                <constraint firstItem="jn2-ts-Wk8" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="17" id="HF2-M5-VHq"/>
+                <constraint firstItem="IiZ-CB-3QE" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="34" id="MYn-JO-qY4"/>
+                <constraint firstItem="jn2-ts-Wk8" firstAttribute="leading" secondItem="Jqz-zs-x8r" secondAttribute="trailing" constant="24" id="YD6-rp-TbD"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="IiZ-CB-3QE" secondAttribute="trailing" constant="16" id="Yc6-RJ-rGh"/>
+                <constraint firstItem="Jqz-zs-x8r" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="20" id="lln-XH-z11"/>
+                <constraint firstItem="Jqz-zs-x8r" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="20" id="wdY-2u-hFB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="361" height="176"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="t3j-1f-L9E" id="Vdf-6p-H09"/>
+                <outlet property="iconImage" destination="Jqz-zs-x8r" id="5a9-Bl-ock"/>
+                <outlet property="priceLabel" destination="jcK-44-OkF" id="F8F-72-Acs"/>
+                <outlet property="selectedCheckmark" destination="IiZ-CB-3QE" id="cGK-8g-8aX"/>
+                <outlet property="titleLabel" destination="pk7-9S-HMb" id="Khj-Wr-66Z"/>
+            </connections>
+            <point key="canvasLocation" x="396.37681159420293" y="115.84821428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="checkmark" width="20" height="20"/>
+    </resources>
+</document>
