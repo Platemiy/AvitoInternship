@@ -26,6 +26,33 @@ class MainPresenter: NSObject, MainPresenterProtocol {
         view?.reloadData()
     }
     
+    func parseData(data: Data) {
+        do {
+            let res = try JSONDecoder().decode(Stat.self, from: data)
+            if res.status != "ok" {
+                print("data corrupted")
+                return
+            }
+            self.titleText = res.result.title
+            self.actionTitle = res.result.actionTitle
+            self.selectedActionTitle = res.result.selectedActionTitle
+            self.options = res.result.list
+           // downloading images
+            if self.options.count > 0 {
+                for  (index, _) in self.options.enumerated() {
+                    if let url = URL(string: self.options[index].icon.values.first!){
+                        if let data = try? Data(contentsOf: url) {
+                            self.options[index].image = data
+                        }
+                    }
+                }
+            }
+        } catch  {
+            print("data is not compatible")
+        }
+    }
+    
+
     func buttonGotSelected() {
         view?.setChooseButtonLabel(with: selectedActionTitle)
     }

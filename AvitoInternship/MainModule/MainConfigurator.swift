@@ -28,10 +28,13 @@ class MainConfigurator: MainConfiguratorProtocol {
         viewController.collectionView.dataSource = presenter
         viewController.collectionView.delegate = presenter
         
-        interactor.fetchData(from: jsonURL)
+        interactor.fetchData(from: jsonURL) { res in
+            if let res = res {
+                presenter.parseData(data: res)
+                DispatchQueue.main.async {
+                    presenter.configureView()
+                }
+            }
+        }
     }
-    
-   
-    
-    
 }

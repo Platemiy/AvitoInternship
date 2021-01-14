@@ -20,12 +20,9 @@ protocol MainPresenterProtocol: class, UICollectionViewDataSource, UICollectionV
  
     var view: MainViewProtocol? { get set }
     var interactor: MainInteractorProtocol? { get set }
-    var options: [Option] { get set }
-    var titleText: String  { get set }
-    var actionTitle: String { get set }
-    var selectedActionTitle: String { get set }
     
     func configureView()
+    func parseData(data: Data)
     
     func buttonGotSelected()
     func buttonGotDeselected()
@@ -35,7 +32,8 @@ protocol MainPresenterProtocol: class, UICollectionViewDataSource, UICollectionV
 
 protocol MainInteractorProtocol: class {
     var presenter: MainPresenterProtocol? { get set }
-    func fetchData(from url: String)
+   // func fetchData(from url: String)
+    func fetchData(from url: String, completion: @escaping (Data?)->Void)
 }
 
 
