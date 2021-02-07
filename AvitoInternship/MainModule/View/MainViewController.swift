@@ -18,6 +18,8 @@ class MainViewController: UIViewController, MainViewProtocol {
     var configurator: MainConfiguratorProtocol = MainConfigurator()
     var presenter: MainPresenterProtocol?
     
+    let spinner = SpinnerViewController()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configurator.configure(with: self)
@@ -47,4 +49,17 @@ class MainViewController: UIViewController, MainViewProtocol {
      func reloadData() {
          collectionView.reloadData()
      }
+    
+    func showHUD() {
+        addChild(spinner)
+        spinner.view.frame = UIScreen.main.bounds
+        view.addSubview(spinner.view)
+        spinner.didMove(toParent: self)
+    }
+    
+    func hideHUD() {
+        spinner.willMove(toParent: nil)
+        spinner.view.removeFromSuperview()
+        spinner.removeFromParent()
+    }
 }

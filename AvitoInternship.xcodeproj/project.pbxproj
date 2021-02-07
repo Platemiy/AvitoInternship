@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D93EA1B25D02096009103D0 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D93EA1A25D02096009103D0 /* SpinnerViewController.swift */; };
 		7DFBF40225A9869400023FE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DFBF40125A9869400023FE9 /* AppDelegate.swift */; };
 		7DFBF40E25A9869A00023FE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DFBF40D25A9869A00023FE9 /* Assets.xcassets */; };
 		7DFBF41125A9869A00023FE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DFBF40F25A9869A00023FE9 /* LaunchScreen.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D93EA1A25D02096009103D0 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		7DFBF3FE25A9869400023FE9 /* AvitoInternship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AvitoInternship.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DFBF40125A9869400023FE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DFBF40D25A9869A00023FE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				7DFBF42C25AC872100023FE9 /* Cell */,
 				7DFBF41825A9875E00023FE9 /* MainViewController.swift */,
 				7DFBF41925A9875E00023FE9 /* MainViewController.xib */,
+				7D93EA1A25D02096009103D0 /* SpinnerViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				7DFBF42625AB2E6800023FE9 /* MainCollectionViewCell.swift in Sources */,
 				7DFBF41F25A9F32B00023FE9 /* MainInteractor.swift in Sources */,
 				7DFBF41D25A9E14400023FE9 /* MainPresenter.swift in Sources */,
+				7D93EA1B25D02096009103D0 /* SpinnerViewController.swift in Sources */,
 				7DFBF42125A9FE9700023FE9 /* MainConfigurator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,6 +12,8 @@ class MainConfigurator: MainConfiguratorProtocol {
     let jsonURL = "https://raw.githubusercontent.com/avito-tech/internship/main/result.json"
     
     func configure(with viewController: MainViewController) {
+        viewController.showHUD()
+        
         viewController.collectionView.register(MainCollectionViewCell.nib(), forCellWithReuseIdentifier: "MainCollectionViewCell")
         
         viewController.setChooseButtonLabel(with: "")
@@ -33,6 +35,7 @@ class MainConfigurator: MainConfiguratorProtocol {
                 presenter.parseData(data: res)
                 DispatchQueue.main.async {
                     presenter.configureView()
+                    viewController.hideHUD()
                 }
             }
         }
